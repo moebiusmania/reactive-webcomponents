@@ -1,2 +1,3 @@
-# functional-webcomponents
-POC demonstrating how to build standard Web Components in functional programming
+# reactive-webcomponents
+POC demonstrating how to build standard Web Components in using reactive programming.
+

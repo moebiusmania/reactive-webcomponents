@@ -1,0 +1,26 @@
+{
+  "name": "reactive-webcomponents",
+  "version": "1.0.0",
+  "description": "POC demonstrating how to build standard Web Components in using reactive programming.",
+  "main": "index.js",
+  "repository": "https://github.com/moebiusmania/reactive-webcomponents",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently -k \"http-server ./dist -s -p 8081\" \"webpack -w\"",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "hyperhtml": "0.17.4",
+    "hyperhtml-element": "0.2.3",
+    "rxjs-es": "5.0.0-beta.12"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.0",
+    "gh-pages": "1.0.0",
+    "http-server": "0.10.0",
+    "uglifyjs-webpack-plugin": "v1.0.0-beta.2",
+    "webpack": "3.5.3",
+    "webpack-notifier": "1.5.0"
+  }
+}

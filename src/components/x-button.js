@@ -26,10 +26,6 @@ class XButton extends HyperHTMLElement {
       .forEach(data => console.log(JSON.stringify(data)));
   }
 
-  onclick(e) {
-    console.log(this, 'click', e.target);
-  }
-
 }
 
 XButton.define('x-button');

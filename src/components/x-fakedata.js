@@ -11,7 +11,7 @@ class FakeData extends HyperHTMLElement {
 
   created(){
     this.attachShadow({mode: 'open'});
-    this.endpoint = 'http://jsonplaceholder.typicode.com/users';
+    this.endpoint = 'https://jsonplaceholder.typicode.com/users';
     this.items = [];
 
     this.render();

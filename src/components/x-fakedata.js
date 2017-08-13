@@ -2,7 +2,7 @@
 
 import HyperHTMLElement from 'hyperhtml-element';
 import { Observable} from 'rxjs-es/Observable';
-import 'rxjs-es/add/observable/fromEvent';
+import 'rxjs-es/add/observable/fromPromise';
 import 'rxjs-es/add/operator/map';
 
 class FakeData extends HyperHTMLElement {
@@ -37,10 +37,12 @@ class FakeData extends HyperHTMLElement {
 
 
   connectedCallback(){
-    fetch(this.endpoint).then(r => r.json())
-      .then(data => {
+    const getData = fetch(this.endpoint).then(r => r.json());
+
+    Observable.fromPromise(getData)
+      .subscribe(data => {
+        console.log(data);
         this.items = JSON.stringify(data);
-        console.log(this.items);
       });
   }
 

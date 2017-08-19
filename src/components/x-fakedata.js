@@ -24,7 +24,7 @@ class FakeData extends HyperHTMLElement {
 
   printItems(items){
     if(items !== ''){
-      const json = JSON.parse(items);
+      const json: array = JSON.parse(items);
       return json.map((e,i) => `<li>${e.name} | ${e.username}</li>` );
     } else {
       return '';

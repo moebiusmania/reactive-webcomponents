@@ -1,3 +1,5 @@
+// @flow
+
 'use strict';
 
 import HyperHTMLElement from 'hyperhtml-element';

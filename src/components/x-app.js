@@ -1,3 +1,5 @@
+// @flow
+
 'use strict';
 
 import HyperHTMLElement from 'hyperhtml-element';
@@ -5,6 +7,7 @@ import './x-button';
 import './x-fakedata';
 
 class XApp extends HyperHTMLElement {
+  number: number;
 
   static get observedAttributes() { return ['number']; }
 
@@ -16,7 +19,7 @@ class XApp extends HyperHTMLElement {
     this.render();
   }
 
-  random(value = 100){
+  random(value: number = 100){
     this.number = Math.random() * value;
   }
 

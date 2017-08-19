@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -15,6 +16,7 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
+    new FlowWebpackPlugin(),
     new UglifyJSPlugin({
       sourceMap: true,
       uglifyOptions: {
@@ -25,5 +27,12 @@ module.exports = {
       title: 'reactive-webcomponents',
       alwaysNotify: true
     })
-  ]
+  ],
+  module: {
+    loaders: [{
+      test: /\.js?$/,
+      exclude: ['node_modules', 'dist'],
+      loader: 'babel-loader'
+    }]
+},
 }

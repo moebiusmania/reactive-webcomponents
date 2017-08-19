@@ -16,7 +16,12 @@
     "rxjs-es": "5.0.0-beta.12"
   },
   "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-flow": "6.23.0",
     "concurrently": "3.5.0",
+    "flow-bin": "0.53.1",
+    "flow-webpack-plugin": "1.1.0",
     "gh-pages": "1.0.0",
     "http-server": "0.10.0",
     "uglifyjs-webpack-plugin": "v1.0.0-beta.2",
